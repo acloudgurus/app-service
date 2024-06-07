@@ -9,10 +9,10 @@ terraform {
 }
 
 provider "azurerm" {
-  subscription_id = "#{subscriptionID}"
-  skip_provider_registration = true 
-  tenant_id = "#{tenantID}"
-  client_id = "#{clientID}"
-  client_secret = "#{clientSecret}"
+  #subscription_id = "#{subscriptionID}"
+  #skip_provider_registration = true 
+  #tenant_id = "#{tenantID}"
+  #client_id = "#{clientID}"
+  #client_secret = "#{clientSecret}"
     features {}
 }
