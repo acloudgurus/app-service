@@ -5,24 +5,24 @@
 variable "resource_group_name" {
   type        = string
   description = "resource group name"
-  default     = null
+  default     = "test-rg"
 }
 
 variable "app_service_name" {
   type = string
-  default = null
+  default = "aasp2"
 }
 
 variable "service_plan_id" {
   description = "ID of the Service Plan that hosts the App Service"
   type        = string
-  default     = null
+  default     = "/subscriptions/4a9ac668-c3d5-4a20-859a-c680184367b8/resourceGroups/test-rg/providers/Microsoft.Web/serverFarms/testasp"
 }
 
 variable "location" {
   description = "Azure location."
   type        = string
-  default     = "East US 2"
+  default     = "East US"
 }
 
 variable "default_tags_enabled" {
@@ -225,7 +225,7 @@ variable "storage_container_name" {
 
 variable "storage_account_name" {
   type = string
-  default = null  
+  default = "teststrageaccount12" 
 }
 
 variable "password_rotation_in_years" {
@@ -297,7 +297,7 @@ variable "certificates" {
 #----------------------------------------------------------
 variable "application_insights_enabled" {
   description = "Specify the Application Insights use for this App Service"
-  default     = true
+  default     = false
 }
 
 variable "application_insights_id" {
