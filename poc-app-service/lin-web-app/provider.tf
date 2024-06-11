@@ -9,10 +9,10 @@ terraform {
 }
 
 provider "azurerm" {
-  subscription_id = "#{AzureAccount.SubscriptionId}"
+  subscription_id = "#{Azure.SubscriptionId}"
   skip_provider_registration = true 
-  tenant_id = "#{AzureAccount.TenantID}"
-  client_id = "#{AzureAccount.ApplicationID}"
-  client_secret = "#{AzureAccount.Password}"
+  tenant_id = "#{Azure.TenantID}"
+  client_id = "#{Azure.ApplicationID}"
+  client_secret = "#{Azure.Password}"
     features {}
 }
