@@ -9,7 +9,7 @@ locals {
   } : {}
 
   default_site_config = {
-    always_on               = "true"
+    always_on               = "false"
     scm_minimum_tls_version = "1.2"
   }
 
