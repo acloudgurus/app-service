@@ -1,6 +1,6 @@
 locals {
 
-  default_tags = var.default_tags_enabled ? {
+  default_tags=var.default_tags_enabled ? {
     ProductCode   = var.product_code
     ProjectCode   = var.project_code
     BusinessUnit  = var.business_unit
