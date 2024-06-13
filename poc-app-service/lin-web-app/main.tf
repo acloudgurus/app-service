@@ -3,10 +3,11 @@
 # 
 terraform {
   backend "azurerm" {
+    resource_group_name = "test-rg"
     storage_account_name = "#{StorageAccountName}"
     container_name       = "#{ContainerName}"
     key                  = "#{Octopus.Environment.Name |ToLower}.terraform.tfstate"
-    access_key           = "#{AccessKey}"
+    #access_key           = "#{AccessKey}"
   }
 }
 
