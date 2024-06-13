@@ -5,7 +5,7 @@ terraform {
   backend "azurerm" {
     storage_account_name = "#{StorageAccountName}"
     container_name       = "#{ContainerName}"
-    key                  = "terraform.tfstate"
+    key                  = "#{Octopus.Environment.Name |ToLower}.terraform.tfstate"
     access_key           = "#{AccessKey}"
   }
 }
