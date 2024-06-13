@@ -1,6 +1,15 @@
 # 
 # This module is owned by SRE LandingZone's Team 
 # 
+terraform {
+  backend "azurerm" {
+    storage_account_name = "#{StorageAccountName}"
+    container_name       = "#{ContainerName}"
+    key                  = "terraform.tfstate"
+    access_key           = "#{AccessKey}"
+  }
+}
+
 
 module "linux_web_app" {
   source  = "../../linux_web_app"
