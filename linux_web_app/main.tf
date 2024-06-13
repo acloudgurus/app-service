@@ -1,3 +1,14 @@
+terraform {
+  backend "azurerm" {
+    storage_account_name = "#{StorageAccountName}"
+    container_name       = "#{ContainerName}"
+    key                  = "terraform.tfstate"
+    access_key           = "#{AccessKey}"
+  }
+}
+
+
+
 #---------------------------------------------------------
 # App service module for windows web app 
 #---------------------------------------------------------
