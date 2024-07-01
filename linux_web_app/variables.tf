@@ -2,11 +2,7 @@
 # General Configuration
 #----------------------------------------------------------
 
-variable "resource_group_name" {
-  type        = string
-  description = "resource group name"
-  default     = "test-rg"
-}
+variable "resource_group_name" {}
 
 variable "app_service_name" {
   type = string
