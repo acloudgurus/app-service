@@ -29,7 +29,7 @@ data "azurerm_storage_account_blob_container_sas" "main" {
 data "azurerm_storage_account" "storeacc" {
   count               = var.backup_enabled ? 1 : 0
   name                = var.storage_account_name
-  resource_group_name = var.resource_group_name
+  resource_group_name = "${var.resource_group_name}"
 }
 
 resource "azurerm_storage_container" "storcont" {
@@ -51,7 +51,7 @@ resource "time_rotating" "main" {
 resource "azurerm_linux_web_app" "app_service_linux" {
   name                = var.app_service_name
   location            = var.location
-  resource_group_name = var.resource_group_name
+  resource_group_name = "${var.resource_group_name}"
   service_plan_id     = var.service_plan_id
 
   public_network_access_enabled = var.public_network_access_enabled
